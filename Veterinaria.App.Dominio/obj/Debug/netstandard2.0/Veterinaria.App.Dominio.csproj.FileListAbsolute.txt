@@ -1,0 +1,9 @@
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\bin\Debug\netstandard2.0\Veterinaria.App.Dominio.deps.json
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\bin\Debug\netstandard2.0\Veterinaria.App.Dominio.dll
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\bin\Debug\netstandard2.0\Veterinaria.App.Dominio.pdb
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.0\Veterinaria.App.Dominio.csprojAssemblyReference.cache
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.0\Veterinaria.App.Dominio.AssemblyInfoInputs.cache
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.0\Veterinaria.App.Dominio.AssemblyInfo.cs
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.0\Veterinaria.App.Dominio.csproj.CoreCompileInputs.cache
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.0\Veterinaria.App.Dominio.dll
+E:\Proyectociclo3\ProyectoVeterinaria.App\Veterinaria.App.Dominio\obj\Debug\netstandard2.0\Veterinaria.App.Dominio.pdb
