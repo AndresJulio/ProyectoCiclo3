@@ -7,6 +7,7 @@ namespace Veterinaria.App.Persistencia{
         Veterinario editVeterinario(Veterinario veterinario);
         void removeVeterinario(int cedula);
         IEnumerable <Veterinario> getVeterinarios();
+        Veterinario obtenerVeterinario(int cedula);
 
     }
 }

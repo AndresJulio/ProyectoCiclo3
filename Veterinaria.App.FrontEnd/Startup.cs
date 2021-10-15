@@ -25,8 +25,15 @@ namespace Veterinaria.App.FrontEnd
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<IRepositorioVeterinario,RepositorioVeterinario>();
-            
+            services.AddSingleton<IRepositorioPersona>(new RepositorioPersona(new Contexto()));
+            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(new Contexto()));
+            services.AddSingleton<IRepositorioAuxiliar>(new RepositorioAuxiliar(new Contexto()));
+            services.AddSingleton<IRepositorioDueño>(new RepositorioDueño(new Contexto()));
+            services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new Contexto()));
+            services.AddSingleton<IRepositorioPerro>(new RepositorioPerro(new Contexto()));
+            services.AddSingleton<IRepositorioGato>(new RepositorioGato(new Contexto()));
+            services.AddSingleton<IRepositorioCita>(new RepositorioCita(new Contexto()));
+            services.AddSingleton<IRepositorioDiagnostico>(new RepositorioDiagnostico(new Contexto()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

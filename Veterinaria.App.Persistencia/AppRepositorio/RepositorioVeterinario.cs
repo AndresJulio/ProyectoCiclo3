@@ -18,7 +18,7 @@ namespace Veterinaria.App.Persistencia{
 
         public Veterinario editVeterinario(Veterinario veterinario)
         {
-             var Veterinarioencontrado= _contexto.veterinarios.Where(x => x.Nombre==veterinario.Nombre).FirstOrDefault();
+             var Veterinarioencontrado= _contexto.veterinarios.Where(x => x.cedula==veterinario.cedula).FirstOrDefault();
              if (Veterinarioencontrado!=null){
                  Veterinarioencontrado.Nombre=veterinario.Nombre;
                  Veterinarioencontrado.Apellido=veterinario.Apellido;
@@ -33,6 +33,12 @@ namespace Veterinaria.App.Persistencia{
         public IEnumerable<Veterinario> getVeterinarios()
         {
             return _contexto.veterinarios;
+        }
+
+        public Veterinario obtenerVeterinario(int cedula)
+        {
+            var Veterinarioen= _contexto.veterinarios.Where(x => x.cedula==cedula).FirstOrDefault();
+            return Veterinarioen;
         }
 
         public void removeVeterinario(int cedula)
