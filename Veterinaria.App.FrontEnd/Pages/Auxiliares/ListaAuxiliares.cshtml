@@ -1,0 +1,25 @@
+﻿@page
+@model Veterinaria.App.FrontEnd.ListaAuxiliaresModel
+@{
+}
+<h1>Gestionar Auxiliares</h1>
+<a class="btn btn-primary table-btn" asp-page="./CrearAuxiliar" >Crear Auxiliar</a>
+<table class="table table-dark">
+    <tr>
+        <th scope="col">Cédula</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Jornada Laboral</th>
+        
+    </tr>
+    @foreach(var auxiliar in Model.auxiliares){
+        <tr>
+            <td>@auxiliar.cedula</td>
+            <td>@auxiliar.Nombre</td>
+            <td>@auxiliar.Apellido</td>
+            <td>@auxiliar.Jornada_Laboral</td>
+            <td><a class="btn btn-primary table-btn" asp-page="./DetalleAuxiliar" asp-route-cedula="@auxiliar.cedula">Detalles</a>
+                <a class="btn btn-primary table-btn" asp-page="./EditarAuxiliar" asp-route-cedula="@auxiliar.cedula">Editar</a><br>
+        </tr>
+    }
+</table>

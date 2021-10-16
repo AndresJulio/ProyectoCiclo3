@@ -1,0 +1,14 @@
+﻿@page
+@model Veterinaria.App.FrontEnd.RemoveMascotaModel
+@{
+}
+<h1>Confirmacion</h1>
+<p>Realmente desea eliminar a la @Model.mascota.Nombre ?</p>
+<form method="post" class="mt-3">
+    <input hidden asp-for="ID"/>
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary">Si</button>
+        <a asp-page="./ListaMascotas" class="btn btn-primary">No</a>
+    </div>
+
+</form>

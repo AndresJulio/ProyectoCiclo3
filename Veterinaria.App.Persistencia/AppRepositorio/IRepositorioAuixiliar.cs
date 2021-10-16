@@ -6,8 +6,9 @@ namespace Veterinaria.App.Persistencia
     public interface IRepositorioAuxiliar{
         Persona addAuxiliar(Auxiliar auxiliar);
         void EliminarAuxiliar(int cedula); 
-        IEnumerable<Persona> obtenerauxiliares();
-        Persona EditarAuxiliar(Auxiliar auxiliar);
+        IEnumerable<Auxiliar> obtenerauxiliares();
+        Auxiliar EditarAuxiliar(Auxiliar auxiliar);
+        Auxiliar obtenerauxiliares(int cedula);
         
     }
 }

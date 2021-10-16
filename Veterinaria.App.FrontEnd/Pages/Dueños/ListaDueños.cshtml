@@ -1,0 +1,29 @@
+﻿@page
+@model Veterinaria.App.FrontEnd.ListaDueñosModel
+@{
+}
+<h1>Gestionar Clientes</h1>
+<a class="btn btn-primary table-btn" asp-page="./CrearDueño" >Crear Cliente</a>
+<table class="table table-dark">
+    <tr>
+        <th scope="col">Cédula</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Acciones</th>
+        
+    </tr>
+    @foreach(var dueño in Model.dueños){
+        <tr>
+            <td>@dueño.cedula</td>
+            <td>@dueño.Nombre</td>
+            <td>@dueño.Apellido</td>
+            <td>@dueño.Ciudad</td>
+            <td>@dueño.Telefono</td>
+            <td><a class="btn btn-primary table-btn" asp-page="./DetalleDueño" asp-route-cedula="@dueño.cedula">Detalles</a>
+                <a class="btn btn-primary table-btn" asp-page="./EditarDueño" asp-route-cedula="@dueño.cedula">Editar</a>
+                <a class="btn btn-primary table-btn" asp-page="./EliminarDueño" asp-route-cedula="@dueño.cedula">Eliminar</a><br>
+        </tr>
+    }
+</table>

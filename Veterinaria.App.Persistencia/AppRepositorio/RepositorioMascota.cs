@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using Veterinaria.App.Dominio;
 
 namespace Veterinaria.App.Persistencia{
@@ -31,12 +32,23 @@ namespace Veterinaria.App.Persistencia{
 
         public IEnumerable<Mascota> getMascotas()
         {
-            return _contexto.mascotas;
+            return _contexto.mascotas.Include("Dueño");
         }
 
-        public void removeMascota(string Nombre)
+        public IEnumerable<Dueño> obtenerDueños()
         {
-            var MascotaDel= _contexto.mascotas.Where(x => x.Nombre==Nombre).FirstOrDefault();
+            return _contexto.dueños;
+        }
+
+        public Mascota obtenerMascotas(int ID)
+        {
+            var Mascotaob= _contexto.mascotas.Where(x => x.ID==ID).FirstOrDefault();
+            return Mascotaob;
+        }
+
+        public void removeMascota(int ID)
+        {
+            var MascotaDel= _contexto.mascotas.Where(x => x.ID==ID).FirstOrDefault();
             if (MascotaDel!=null){
                 _contexto.mascotas.Remove(MascotaDel);
                 _contexto.SaveChanges();

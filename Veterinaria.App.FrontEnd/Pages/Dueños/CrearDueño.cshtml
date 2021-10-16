@@ -1,0 +1,32 @@
+﻿@page
+@model Veterinaria.App.FrontEnd.CrearDueñoModel
+@{
+}
+<h1>Crear Cliente</h1>
+<form method="post" class="mt-3">
+    <input hidden asp-for="dueño.ID"/>
+    <div class="form-group row">
+        <label asp-for="dueño.cedula" class="col-sm-2"></label>
+        <input asp-for="dueño.cedula" class="form-control">
+    </div>
+    <div class="form-group row">
+        <label asp-for="dueño.Nombre" class="col-sm-2"></label>
+        <input asp-for="dueño.Nombre" class="form-control">
+    </div>
+    <div class="form-group row">
+        <label asp-for="dueño.Apellido" class="col-sm-2"></label>
+        <input asp-for="dueño.Apellido" class="form-control">
+    </div>
+    <div class="form-group row">
+        <label asp-for="dueño.Ciudad" class="col-sm-2"></label>
+        <input asp-for="dueño.Ciudad" class="form-control">
+    </div>
+    <div class="form-group row">
+        <label asp-for="dueño.Telefono" class="col-sm-2"></label>
+        <input asp-for="dueño.Telefono" class="form-control">
+    </div>
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+        <a asp-page="/ListaDueños" class="btn btn-primary">Cancelar</a>
+    </div>
+</form>

@@ -16,7 +16,7 @@ namespace Veterinaria.App.Persistencia{
             return AuxiliarAdd;
         }
 
-        public Persona EditarAuxiliar(Auxiliar auxiliar)
+        public Auxiliar EditarAuxiliar(Auxiliar auxiliar)
         {
             var Auxiliarencontrado= _contexto.auxiliares.Where(x => x.Nombre==auxiliar.Nombre).FirstOrDefault();
             if (Auxiliarencontrado!=null){
@@ -39,9 +39,15 @@ namespace Veterinaria.App.Persistencia{
             }
         }
 
-        public IEnumerable<Persona> obtenerauxiliares()
+        public IEnumerable<Auxiliar> obtenerauxiliares()
         {
             return _contexto.auxiliares;
+        }
+
+        public Auxiliar obtenerauxiliares(int cedula)
+        {
+            var Auxiliarobtenido= _contexto.auxiliares.Where(x => x.cedula==cedula).FirstOrDefault();
+            return Auxiliarobtenido;
         }
     }
 

@@ -7,6 +7,7 @@ namespace Veterinaria.App.Persistencia{
         Dueño editDueño(Dueño dueño);
         void removeDueño(int cedula);
         IEnumerable <Dueño> getDueños();
+        Dueño obtenerdueños(int cedula);
 
     }
 }

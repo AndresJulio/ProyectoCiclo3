@@ -5,8 +5,9 @@ namespace Veterinaria.App.Persistencia{
     public interface IRepositorioMascota{
         Mascota addMascota(Mascota mascota);
         Mascota editMascota(Mascota mascota);
-        void removeMascota(string Nombre);
+        void removeMascota(int ID);
         IEnumerable <Mascota> getMascotas();
-
+        Mascota obtenerMascotas(int ID);
+        IEnumerable <Dueño> obtenerDueños();
     }
 }

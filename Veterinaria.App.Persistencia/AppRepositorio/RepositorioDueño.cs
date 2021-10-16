@@ -18,7 +18,7 @@ namespace Veterinaria.App.Persistencia{
 
         public Dueño editDueño(Dueño dueño)
         {
-            var Dueñoencontrado= _contexto.dueños.Where(x => x.Nombre==dueño.Nombre).FirstOrDefault();
+            var Dueñoencontrado= _contexto.dueños.Where(x => x.cedula==dueño.cedula).FirstOrDefault();
             if (Dueñoencontrado!=null){
                 Dueñoencontrado.Nombre=dueño.Nombre;
                 Dueñoencontrado.Apellido=dueño.Apellido;
@@ -34,6 +34,12 @@ namespace Veterinaria.App.Persistencia{
         public IEnumerable<Dueño> getDueños()
         {
             return _contexto.dueños;
+        }
+
+        public Dueño obtenerdueños(int cedula)
+        {
+            var Dueñoen= _contexto.dueños.Where(x => x.cedula==cedula).FirstOrDefault();
+            return Dueñoen;
         }
 
         public void removeDueño(int cedula)

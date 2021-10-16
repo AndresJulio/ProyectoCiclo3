@@ -1,0 +1,28 @@
+﻿@page
+@model Veterinaria.App.FrontEnd.CrearAuxiliarModel
+@{
+}
+<h1>Crear Auxiliar</h1>
+<form method="post" class="mt-3">
+    <input hidden asp-for="auxiliar.ID"/>
+    <div class="form-group row">
+        <label asp-for="auxiliar.cedula" class="col-sm-2"></label>
+        <input asp-for="auxiliar.cedula" class="form-control">
+    </div>
+    <div class="form-group row">
+        <label asp-for="auxiliar.Nombre" class="col-sm-2"></label>
+        <input asp-for="auxiliar.Nombre" class="form-control">
+    </div>
+    <div class="form-group row">
+        <label asp-for="auxiliar.Apellido" class="col-sm-2"></label>
+        <input asp-for="auxiliar.Apellido" class="form-control">
+    </div>
+    <div class="form-group row">
+        <label asp-for="auxiliar.Jornada_Laboral" class="col-sm-2"></label>
+        <input asp-for="auxiliar.Jornada_Laboral" class="form-control">
+    </div>
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+        <a asp-page="/ListaAuxiliares" class="btn btn-primary">Cancelar</a>
+    </div>
+</form>
